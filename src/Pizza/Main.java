@@ -3,7 +3,6 @@ package Pizza;
 public class Main {
 
     void go(){
-
         Menukort menukort = new Menukort();
         menukort.pizzaer();
 

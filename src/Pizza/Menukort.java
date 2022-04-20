@@ -1,16 +1,21 @@
 package Pizza;
 
 import java.util.ArrayList;
+import java.util.Scanner;
+
 
 public class Menukort {
+
+  Scanner scan = new Scanner(System.in);
 
   public void pizzaer(){
     ArrayList<String> pizza = new ArrayList<String>();
 
-    pizza.add("Vesuvio" + "\n");
-    pizza.add("Amerikaner" + "\n");
-    pizza.add("Cacceatore" + "\n");
-    pizza.add("Carbona" + "\n");
+    pizza.add("");
+    pizza.add("1: Vesuvio" + "\n");
+    pizza.add("2: Amerikaner" + "\n");
+    pizza.add("3: Cacceatore" + "\n");
+    pizza.add("4: Carbona" + "\n");
     pizza.add("Dennis" + "\n");
     pizza.add("Beril" + "\n");
     pizza.add("Silvia" + "\n");
@@ -22,8 +27,11 @@ public class Menukort {
     pizza.add("Venezia" + "\n");
     pizza.add("Mafia"+ "\n");
 
+    System.out.println(pizza.toString());
 
-    System.out.println(pizza);
+    //På denne måde kan man "tage" pizzaen
+    String pizza1 = pizza.get(1);
+    System.out.println(pizza1);
 
 
   }
