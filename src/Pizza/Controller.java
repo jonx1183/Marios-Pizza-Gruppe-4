@@ -5,7 +5,7 @@ public class Controller {
     Menukort menukort = new Menukort();
 
     public void go(){
-        menukort.pizzaMenu();
+
         menukort.whichKey();
         hotKeyMenu();
 
