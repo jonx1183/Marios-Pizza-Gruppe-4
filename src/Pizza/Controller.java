@@ -1,6 +1,6 @@
 package Pizza;
 
-public class Pizzaria {
+public class Controller {
 
     Menukort menukort = new Menukort();
 
