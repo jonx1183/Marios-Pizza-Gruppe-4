@@ -37,4 +37,45 @@ public class Menukort {
   public void whichKey(){
     answer = scan.nextLine();
   }
+
+  Menukort menu = new Menukort();
+  List<IItem> tmpMenuCart;
+
+
+  private int autoID = 1;
+  private int autoClientID = 1;
+
+  //creating a instance in order to share files
+  public static Menukort _instance;
+
+  // to access listview in queue form
+  public ListView lstViewMenuCart;
+
+  BestillingsOversigt sndForm = new BestillingsOversigt();
+  public Menukort()
+  {
+    InitializeComponent();
+    // whenever this class is called, the instance is saved
+    _instance = this;
+    lstViewMenuCart = listMenu;
+    tmpMenuCart = menu.GetMenu();
+
+  }
+
+  private void InitializeComponent() {
+  }
+
+
+  {
+    for (int i = 0; i < tmpMenuCart.Count; i++)
+    {
+      IItem tmpItem = tmpMenuCart[i];
+      AddToListView(tmpItem.GetName(), tmpItem.GetDescription(),
+          tmpItem.GetCost());
+    }
+  }
+
+  private void AddToListView(String getName, PizzaBestillinger getDescription, int getCost) {
+  }
 }
+
