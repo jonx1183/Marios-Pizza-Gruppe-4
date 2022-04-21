@@ -9,7 +9,6 @@ public class Menukort {
 
  Scanner scan = new Scanner(System.in);
 
-
   public void pizzaMenu(){
 
     ArrayList<String> pizza = new ArrayList<String>();
