@@ -6,18 +6,23 @@ public class ID {
     private String orderID;
     private int estimation;
 
+    ID(){
+
+    }
+
     public ID(int pizzaID, String orderID, int estimation){
         this.orderID = orderID;
         this.estimation = estimation;
         this.pizzaID = pizzaID;
     }
-
     public String getOrderID(){
         return orderID;
     }
+
     public int getPizzaID(){
         return pizzaID;
     }
+
     public int getEstimation(){
         return estimation;
     }

@@ -6,7 +6,9 @@ import java.util.Scanner;
 
 public class Menukort {
 
-  Scanner scan = new Scanner(System.in);
+   String answer;
+
+ Scanner scan = new Scanner(System.in);
 
   public void pizzaer(){
     ArrayList<String> pizza = new ArrayList<String>();
@@ -27,13 +29,20 @@ public class Menukort {
     pizza.add("Venezia" + "\n");
     pizza.add("Mafia"+ "\n");
 
-    System.out.println(pizza.toString());
+    //System.out.println(pizza.toString());
 
     //På denne måde kan man "tage" pizzaen
-    String pizza1 = pizza.get(1);
-    System.out.println(pizza1);
+    //String pizza1 = pizza.get(1);
+
+    //System.out.println(pizza1);
 
 
+  }
+  public void
+
+  public void whichKey(){
+
+    answer = scan.nextLine().toLowerCase();
   }
 
 }
