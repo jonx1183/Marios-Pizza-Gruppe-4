@@ -1,16 +1,18 @@
 package Pizza;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 
 public class Menukort {
-
    String answer;
 
  Scanner scan = new Scanner(System.in);
 
-  public void pizzaer(){
+
+  public void pizzaMenu(){
+
     ArrayList<String> pizza = new ArrayList<String>();
 
     pizza.add("");
@@ -18,31 +20,23 @@ public class Menukort {
     pizza.add("2: Amerikaner" + "\n");
     pizza.add("3: Cacceatore" + "\n");
     pizza.add("4: Carbona" + "\n");
-    pizza.add("Dennis" + "\n");
-    pizza.add("Beril" + "\n");
-    pizza.add("Silvia" + "\n");
-    pizza.add("Victoria" + "\n" );
-    pizza.add("Toronfo" + "\n");
-    pizza.add("Capricciosa" + "\n");
-    pizza.add("Hawai" + "\n");
-    pizza.add("Le Blissola" + "\n");
-    pizza.add("Venezia" + "\n");
-    pizza.add("Mafia"+ "\n");
+    pizza.add("5: Dennis" + "\n");
+    pizza.add("6: Beril" + "\n");
+    pizza.add("7: Silvia" + "\n");
+    pizza.add("8: Victoria" + "\n" );
+    pizza.add("9: Toronfo" + "\n");
+    pizza.add("10: Capricciosa" + "\n");
+    pizza.add("11: Hawai" + "\n");
+    pizza.add("12: Le Blissola" + "\n");
+    pizza.add("13: Venezia" + "\n");
+    pizza.add("14: Mafia"+ "\n");
 
-    //System.out.println(pizza.toString());
-
-    //På denne måde kan man "tage" pizzaen
-    //String pizza1 = pizza.get(1);
-
-    //System.out.println(pizza1);
-
-
+    for (int i = 0; i < pizza.size(); i++) {
+      System.out.println(pizza.get(i));
+    }
   }
-  public void
 
   public void whichKey(){
-
-    answer = scan.nextLine().toLowerCase();
+    answer = scan.nextLine();
   }
-
 }
