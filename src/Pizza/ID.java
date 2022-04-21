@@ -2,7 +2,7 @@ package Pizza;
 
 public class ID {
 
-    private int pizzaID;
+    private String pizzaID;
     private String orderID;
     private int estimation;
 
@@ -10,7 +10,7 @@ public class ID {
 
     }
 
-    public ID(int pizzaID, String orderID, int estimation){
+    public ID(String pizzaID, String orderID, int estimation){
         this.orderID = orderID;
         this.estimation = estimation;
         this.pizzaID = pizzaID;
@@ -19,7 +19,7 @@ public class ID {
         return orderID;
     }
 
-    public int getPizzaID(){
+    public String getPizzaID(){
         return pizzaID;
     }
 
@@ -27,9 +27,10 @@ public class ID {
         return estimation;
     }
 
-    public void setPizzaID(int pizzaID){
+    public void setPizzaID(String pizzaID){
         this.pizzaID = pizzaID;
     }
+
     public void setOrderID(String orderID){
         this.orderID = orderID;
     }

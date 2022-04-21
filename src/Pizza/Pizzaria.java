@@ -1,10 +1,7 @@
 package Pizza;
 
-import java.util.Arrays;
-
 public class Pizzaria {
 
-    ID id = new ID();
     Menukort menukort = new Menukort();
 
     public void go(){
