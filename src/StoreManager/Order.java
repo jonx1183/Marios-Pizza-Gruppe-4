@@ -20,11 +20,11 @@ public class Order implements IOrder
     this._time = LocalDateTime.now();
   }
 
-  public IItem GetOrderItem() {
+  public IItem getOrderItem() {
     return this._order;
   }
 
-  public String GetOrderTime() {
+  public String getOrderTime() {
     DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
     String formattedDate = this._time.format(myFormatObj);
     return formattedDate;

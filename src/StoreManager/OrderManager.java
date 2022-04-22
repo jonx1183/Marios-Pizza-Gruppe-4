@@ -24,14 +24,14 @@ public class OrderManager
     _storeQueue = new StoreQueue();
   }
 
-  private IItem MAkeOrder(){
-    Dictionary<Integer, IItem> menu = _menu.GetMenuKort();
-    int orderNr = ChooseOrderNumber();
+  private IItem makeOrder(){
+    Dictionary<Integer, IItem> menu = _menu.getMenuKort();
+    int orderNr = chooseOrderNumber();
     IItem ChosenOrder = menu.get(orderNr - 1);
     return ChosenOrder;
   }
-  public void ViewOrder(){
-    currentPizza = MAkeOrder();
+  public void viewOrder(){
+    currentPizza = makeOrder();
     System.out.println(" ---YOUR CHOICE--- ");
     System.out.println("NAme: " + currentPizza.GetName() + '\n'
         + "Description: " + currentPizza.GetDescription() + '\n'
@@ -39,15 +39,15 @@ public class OrderManager
     System.out.println();
     clientOrder = new Order(currentPizza, OrderState.Ready);
     System.out.println(" ---ORDER INFO--- ");
-    System.out.println("OrderInfo => " + clientOrder.GetOrderItem() + "\nOrderStatus => "+ clientOrder.GetOrderStatus()
-                        + "\nOrder Date & Time => " + clientOrder.GetOrderTime());
+    System.out.println("OrderInfo => " + clientOrder.getOrderItem() + "\nOrderStatus => "+ clientOrder.GetOrderStatus()
+                        + "\nOrder Date & Time => " + clientOrder.getOrderTime());
     System.out.println();
   }
   public IOrder SelectClientOrder(){
     IOrder tmpOrder = clientOrder;
     return tmpOrder;
   }
-  public void AddOrderToQueue(){
+  public void addOrderToQueue(){
     IOrder value = SelectClientOrder();
     _storeQueue.AddOrder(value);
   }
@@ -56,17 +56,17 @@ public class OrderManager
     _storeQueue.DeleteOrder(value);
   }
 
-  public void ViewQueueList(){
+  public void viewQueueList(){
     int clientID = 1;
     System.out.println(" ---QUEUE INFO--- ");
     for (IOrder item: _storeQueue.QueueOverview) {
-      System.out.println("Client ID: "+ clientID +" | Date&Time: "+item.GetOrderTime()+ " | OrderName: "+item.GetOrderItem()
+      System.out.println("Client ID: "+ clientID +" | Date&Time: "+item.getOrderTime()+ " | OrderName: "+item.getOrderItem()
                           +" | OrderStatus: " + item.GetOrderStatus());
     }
   }
 
 
-  private int ChooseOrderNumber(){
+  public int chooseOrderNumber(){
     System.out.print("Hello, please choose a pizza by number: ");
     Scanner sc = new Scanner(System.in);
     String input = sc.nextLine();

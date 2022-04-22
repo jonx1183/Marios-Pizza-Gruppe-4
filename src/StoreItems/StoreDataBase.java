@@ -14,7 +14,7 @@ public class StoreDataBase {
 
     List<IItem> tempMenu = new ArrayList<IItem>();
 
-    public List<IItem> CreateMenu () {
+    public List<IItem> createMenu () {
       tempMenu.add(new Pizza("Vesuvio", "tomatsauce, ost, skinke og oregano", 57));
       tempMenu.add(new Pizza("Amerikaner", "tomatsauce, ost, oksefars og oregano", 53));
       tempMenu.add(new Pizza("Cacciatore", "tomatsauce, ost, pepperoni og oregano", 57));

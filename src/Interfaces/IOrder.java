@@ -7,8 +7,8 @@ import java.time.LocalDateTime;
 
 public interface IOrder
 {
-  IItem GetOrderItem();
-  String GetOrderTime();
+  IItem getOrderItem();
+  String getOrderTime();
   OrderState GetOrderStatus();
   void ChangeOrderStatus(OrderState state);
 }

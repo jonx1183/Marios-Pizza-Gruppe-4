@@ -8,15 +8,5 @@ public class Controller {
 
     }
 
-   /* public void hotKeyMenu(){
-        switch(menu.answer) {
-            case "menu", "m" -> menu.CreateMenu();
-
-
-    */
-
-
-
-
-    }
+}
 

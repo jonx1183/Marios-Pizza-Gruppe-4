@@ -6,10 +6,6 @@ import StoreManager.OrderManager;
 
 public class Main {
 
-    StoreDataBase menu = new StoreDataBase();
-
-
-
     public void go(){
 
 
@@ -20,9 +16,9 @@ public class Main {
         _menu.PrintMenu();
 
 
-        _management.ViewOrder();
-        _management.AddOrderToQueue();
-        _management.ViewQueueList();
+        _management.viewOrder();
+        _management.addOrderToQueue();
+        _management.viewQueueList();
 
 
 
