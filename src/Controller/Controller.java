@@ -23,7 +23,6 @@ public class Controller {
 
         while(gameOn == true){
             _management.viewOrder();
-            _management.addOrderToQueue();
             _management.viewQueueList();
             _userInterface.SelectNextClientOrder();
 

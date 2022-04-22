@@ -7,26 +7,41 @@ import StoreItems.Pizza;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 public class Order implements IOrder
 {
-  private IItem _order;
+  private List<IItem> _order;
   private OrderState _state;
   private LocalDateTime _time ;
   public int clientID = 1;
 
-  public Order(IItem pizza, OrderState state){
+  public Order(List<IItem> pizza, OrderState state){
     this._order = pizza;
     this._state = state;
     this._time = LocalDateTime.now();
   }
 
-  public IItem getOrderItem() {
+  public List<IItem> getOrderItem() {
     return this._order;
   }
 
+  private List<IItem> GetItemList(){
+    return this._order;
+  }
+
+  public void GetOrder()
+  {
+    List<IItem> tmpValue = GetItemList();
+    for (IItem pizza: tmpValue)
+    {
+      System.out.println("Orderinfo => " + pizza.GetName()+ ": "+ pizza.GetDescription()
+                        +"........" + pizza.GetCost());
+    }
+  }
+
   public int GetClientId() {
-    return this.clientID++;
+    return this.clientID ++;
   }
 
   public String getOrderTime() {
@@ -42,4 +57,6 @@ public class Order implements IOrder
   public void ChangeOrderStatus(OrderState state) {
     this._state = state;
   }
+
+
 }
