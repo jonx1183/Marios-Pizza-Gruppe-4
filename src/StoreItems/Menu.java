@@ -2,16 +2,16 @@ package StoreItems;
 
 import Interfaces.IItem;
 
-import java.util.Dictionary;
-import java.util.Enumeration;
-import java.util.Hashtable;
-import java.util.List;
+import java.util.*;
 
 public class Menu
 {
   public Dictionary<Integer, IItem> MenuKort;
   private Integer bestillingsNr = 0;
   private StoreDataBase _data;
+  private String answer;
+
+  Scanner scan = new Scanner(System.in);
 
   public Menu(){
     MenuKort = new Hashtable<Integer, IItem>();
@@ -37,7 +37,7 @@ public class Menu
       System.out.println( pizzaNr + " " + tmpValue.get(i));
       pizzaNr++;
     }
-    System.out.println();
+      System.out.println();
       
 
   }
