@@ -41,6 +41,6 @@ public class Pizza implements IItem
   // Overriding toString() method of String class
   @Override
   public String toString() {
-    return GetName() + " : " + GetDescription() + "....." + ConvertToDanishCurrency().format(GetCost());
+    return GetName() + " : " + GetDescription() + "..." + ConvertToDanishCurrency().format(GetCost());
   }
 }

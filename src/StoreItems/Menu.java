@@ -11,7 +11,7 @@ public class Menu
   private StoreDataBase _data;
   private String answer;
 
-  Scanner scan = new Scanner(System.in);
+  //Scanner scan = new Scanner(System.in);
 
   public Menu(){
     menuKort = new Hashtable<Integer, IItem>();

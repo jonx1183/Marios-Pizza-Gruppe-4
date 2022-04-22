@@ -1,16 +1,19 @@
 package StoreManager;
 
+import Controller.Controller;
 import Interfaces.IItem;
 import Interfaces.IOrder;
 import StoreItems.Menu;
 import StoreItems.Pizza;
 
+import javax.naming.ldap.Control;
 import java.util.Dictionary;
 import java.util.Queue;
 import java.util.Scanner;
 
 public class OrderManager
 {
+
   Menu _menu;
   // global variable for current chosen pizza
   IItem currentPizza;
@@ -70,6 +73,7 @@ public class OrderManager
     System.out.print("Hello, please choose a pizza by number: ");
     Scanner sc = new Scanner(System.in);
     String input = sc.nextLine();
+
     Integer orderValue = Integer.parseInt(input);
     System.out.println("Thank you ! you have chosen nr: " + orderValue +'\n');
     return orderValue;
