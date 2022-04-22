@@ -1,13 +1,16 @@
 package Pizza;
 
+import Interfaces.IItem;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class PizzaBestillinger {
   List<IItem> menuItems;
-
+/*
   public List<IItem> GetMenu()
   {
-    menuItems = new List<Item>()
+    menuItems = new ArrayList<IItem>()
     {
                 new Pizza("Vesuvio","tomatsauce, ost, skinke og oregano",57),
                 new Pizza("Amerikaner","tomatsauce, ost, oksefars og oregano",53),
@@ -26,4 +29,6 @@ public class PizzaBestillinger {
     };
     return menuItems;
   }
+
+ */
 }

@@ -1,5 +1,7 @@
 package Pizza;
 
+import Interfaces.IItem;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -38,6 +40,7 @@ public class Menukort {
     answer = scan.nextLine();
   }
 
+  /*
   Menukort menu = new Menukort();
   List<IItem> tmpMenuCart;
 
@@ -77,5 +80,7 @@ public class Menukort {
 
   private void AddToListView(String getName, PizzaBestillinger getDescription, int getCost) {
   }
+
+ */
 }
 
