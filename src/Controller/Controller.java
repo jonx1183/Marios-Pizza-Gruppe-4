@@ -4,7 +4,8 @@ import StoreItems.Menu;
 import StoreManager.OrderManager;
 
 public class Controller {
-    public boolean gameOn = true;
+
+    private boolean gameOn = true;
 
     OrderManager _management = new OrderManager();
     Menu _menu = new Menu();
@@ -16,6 +17,7 @@ public class Controller {
     }
 
     public void gameOn(){
+
         while(gameOn == true){
 
             _menu.PrintMenu();

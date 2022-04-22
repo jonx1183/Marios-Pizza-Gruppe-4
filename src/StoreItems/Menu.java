@@ -25,7 +25,11 @@ public class Menu
     {
       // to populate the menukort
       menuKort.put(bestillingsNr, tmpContainer.get(i));
-      bestillingsNr ++;
+      if (bestillingsNr ==null){
+        System.out.println("that is not a number");
+      } else if(bestillingsNr < 13){
+      bestillingsNr++;
+      }
     }
     return menuKort;
   }
@@ -33,13 +37,13 @@ public class Menu
   public void PrintMenu(){
     Dictionary<Integer, IItem> tmpValue = getMenuKort();
     int pizzaNr = 1;
+
     for (int i = 0; i < tmpValue.size(); i++){
       System.out.println( pizzaNr + " " + tmpValue.get(i));
+      //skal tælle pizzaer op til 14 og ikke mere
       pizzaNr++;
     }
-      System.out.println();
-      
-
+     // System.out.println();
   }
   
 
