@@ -14,7 +14,7 @@ public class Menu
   //Scanner scan = new Scanner(System.in);
 
   public Menu(){
-    menuKort = new Hashtable<Integer, IItem>();
+    menuKort = new Hashtable<>();
     _data = new StoreDataBase();
   }
 
@@ -31,6 +31,7 @@ public class Menu
   }
   
   public void PrintMenu(){
+    System.out.println(" ---MENU KORT--- ");
     Dictionary<Integer, IItem> tmpValue = getMenuKort();
     int pizzaNr = 1;
     for (int i = 0; i < tmpValue.size(); i++){
@@ -38,8 +39,6 @@ public class Menu
       pizzaNr++;
     }
       System.out.println();
-      
-
   }
   
 
