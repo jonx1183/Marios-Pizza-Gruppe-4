@@ -7,22 +7,17 @@ import java.util.Queue;
 
 public class StoreQueue implements IOrderQueue
 {
-  private int OrderId = 1;
-  public Queue<IOrder> QueueOverview;
-
 
   public StoreQueue(){
-    QueueOverview = new LinkedList<>();
-  }
-  public int GetOrderId() {
-    return OrderId;
+
   }
 
-  public void AddOrder(IOrder order) {
-    QueueOverview.add(order);
+
+  public void AddOrder(Queue<IOrder> lst,IOrder order) {
+    lst.add(order);
   }
 
-  public void DeleteOrder(IOrder order) {
-    QueueOverview.poll();
+  public void DeleteOrder(Queue<IOrder> lst) {
+    lst.poll();
   }
 }

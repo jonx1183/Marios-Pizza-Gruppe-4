@@ -2,13 +2,14 @@ package Controller;
 
 import StoreItems.Menu;
 import StoreManager.OrderManager;
+import StoreManager.UI;
 
 public class Controller {
-
-    private boolean gameOn = true;
+    public boolean gameOn = true;
 
     OrderManager _management = new OrderManager();
     Menu _menu = new Menu();
+    UI _userInterface = new UI();
 
 
 
@@ -17,15 +18,13 @@ public class Controller {
     }
 
     public void gameOn(){
+        _userInterface.GetWelcomeMsg();
+        _menu.PrintMenu();
 
         while(gameOn == true){
-
-            _menu.PrintMenu();
-
-
             _management.viewOrder();
-            _management.addOrderToQueue();
             _management.viewQueueList();
+            _userInterface.SelectNextClientOrder();
 
         }
     }

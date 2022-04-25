@@ -14,7 +14,7 @@ public class Menu
   //Scanner scan = new Scanner(System.in);
 
   public Menu(){
-    menuKort = new Hashtable<Integer, IItem>();
+    menuKort = new Hashtable<>();
     _data = new StoreDataBase();
   }
 
@@ -35,6 +35,7 @@ public class Menu
   }
   
   public void PrintMenu(){
+    System.out.println(" ---MENU KORT--- ");
     Dictionary<Integer, IItem> tmpValue = getMenuKort();
     int pizzaNr = 1;
 
@@ -43,7 +44,7 @@ public class Menu
       //skal tælle pizzaer op til 14 og ikke mere
       pizzaNr++;
     }
-     // System.out.println();
+      System.out.println();
   }
   
 
