@@ -15,7 +15,7 @@ public class OrderManager
   Menu _menu;
   // global variable for current chosen pizza
   List<Order> currentPizzaOrder = new ArrayList<>();
-  IOrder clientOrder;
+  Order clientOrder;
   StoreQueue _storeQueue;
   UI _UIcontext;
   boolean isOrdering;
@@ -36,16 +36,16 @@ public class OrderManager
     Dictionary<Integer, IItem> menu = _menu.getMenuKort();
     //listOfChosenOrder.clear();
     int qty = _UIcontext.GiveOrderQuantity();
-    isOrdering = true;
-    while (isOrdering){
-      if (qty == 1){
+    //isOrdering = true;
+
+  /*    if (qty == 1){
         System.out.println("Please choose a pizza by number: ");
         System.out.print("Enter a pizza Nr:");
         orderNr = chooseOrderNumber();
         ChosenOrder = menu.get(orderNr - 1); // -1 beacuse In GetMenu() index start by zero
         listOfChosenOrder.add(ChosenOrder);
         isOrdering = false;
-      }else {
+      }else {*/
         System.out.println("Please choose a pizza by number:  ");
         for (int i =0; i < qty; i++){
           System.out.print("Enter a pizza Nr:");
@@ -56,32 +56,46 @@ public class OrderManager
           listOfChosenOrder.add(ChosenOrder);
           isOrdering = false;
         }
-      }
-    }
     return new Order(listOfChosenOrder, OrderState.Preparing);
+    }
+   // return new Order(listOfChosenOrder, OrderState.Preparing);
    // return listOfChosenOrder;
+
+
+
+
+  public void viewOrder2(){
+    currentPizzaOrder.toString();
   }
+
   public void viewOrder(){
-    currentPizzaOrder.clear();
+    //Skal måske væk
+   // currentPizzaOrder.clear();
+
+    //Denne her adder til jeres OrdreListe
     currentPizzaOrder.add(makeOrder());
-    System.out.println(currentPizzaOrder.size());
-    System.out.println(currentPizzaOrder.get(0));
     System.out.println(" ---YOUR CHOICE--- ");
 
 
-    for (IItem item: currentPizzaOrder)
+   /* for (Order item: currentPizzaOrder)
     {
-      System.out.println("NAme: " + item.GetName() + '\n'
+      System.out.println("NAme: " + item.getPizza.get + '\n'
           + "Description: " + item.GetDescription() + '\n'
           + "Price: " + item.GetCost());
+    }*/
+
+    //Dette printer jeres Ordre objekt - Den brugere jeres TOSTRING under Order.
+    System.out.println();
+    for (int i = 0; i < currentPizzaOrder.size(); i++) {
+      System.out.println(currentPizzaOrder.get(i));
     }
 
-    System.out.println();
-    clientOrder = new Order(currentPizzaOrder, OrderState.NewOrder);
+
+    //clientOrder = new Order(currentPizzaOrder, OrderState.NewOrder);
     System.out.println(" ---ORDER INFO--- ");
-    clientOrder.GetOrder();
-    System.out.println("OrderStatus => "+ clientOrder.GetOrderStatus()
-                        + "\nOrder Date & Time => " + clientOrder.getOrderTime());
+   // clientOrder.GetOrder();
+   // System.out.println("OrderStatus => "+ clientOrder.GetOrderStatus()
+    //                    + "\nOrder Date & Time => " + clientOrder.getOrderTime());
     System.out.println();
   }
   public IOrder SelectClientOrder(){
@@ -103,13 +117,13 @@ public class OrderManager
     AddOrderToQueue();
     System.out.println(" ---QUEUE INFO--- ");
 
-    for (IOrder item: lst) {
+   /* for (IOrder item: lst) {
 
       System.out.println("Client ID: "+ item.GetClientId()+" | Date&Time: "+item.getOrderTime()
                           + "\n| OrderName: "+item.getOrderItem()
                           +"\n| OrderStatus: " + item.GetOrderStatus() + "\n");
 
-    }
+    }*/
 
 
 

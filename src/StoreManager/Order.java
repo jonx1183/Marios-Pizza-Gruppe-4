@@ -41,7 +41,7 @@ public class Order implements IOrder
   }
 
   public int GetClientId() {
-    return this.clientID ++;
+    return this.clientID++;
   }
 
   public String getOrderTime() {
@@ -61,7 +61,7 @@ public class Order implements IOrder
   // Overriding toString() method of String class
   @Override
   public String toString() {
-    return this.GetClientId() + " : " + this.getOrderTime() + " : " + this.getOrderItem() + " [" + this.GetOrderStatus() + "] " + "\n"+ _order.toString().replace("[","").replace("]", "").replace(",", "\n")+"\n";
+    return this.GetClientId() + " : " + this.getOrderTime() + " : "  + " [" + this.GetOrderStatus() + "] " + "\n"+ _order.toString().replace("[","").replace("]", "").replace(",", "\n")+"\n";
   }
 
 }

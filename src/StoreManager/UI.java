@@ -12,9 +12,9 @@ public class UI {
     System.out.println("------------------------------------------------------------");
     System.out.println("                                 -----");
     System.out.println("                                | - - |");
-    System.out.println("Hello! Wellcome to MarioPizza   |  -  |");
+    System.out.println("Hello! Welcome to MarioPizza   |  -  |");
     System.out.println("                                  ---");
-    System.out.println("Please Find our order list on the Menu Kort.\n");
+    System.out.println("Menukort.\n");
   }
 
   public int GiveOrderQuantity(){
@@ -23,7 +23,4 @@ public class UI {
     return qty;
   }
 
-  public  void SelectNextClientOrder(){
-    System.out.println("Next Client..., Please Step forward!");
-  }
 }

@@ -9,9 +9,9 @@ public class Menu
   public Dictionary<Integer, IItem> menuKort;
   private Integer bestillingsNr = 0;
   private StoreDataBase _data;
-  private String answer;
 
-  //Scanner scan = new Scanner(System.in);
+
+
 
   public Menu(){
     menuKort = new Hashtable<>();
@@ -25,6 +25,8 @@ public class Menu
     {
       // to populate the menukort
       menuKort.put(bestillingsNr, tmpContainer.get(i));
+
+      //Gør så menukort kun bliver kørt én gang, og hvis bestillingerne op til 14
       if (bestillingsNr ==null){
         System.out.println("that is not a number");
       } else if(bestillingsNr < 13){
@@ -41,7 +43,6 @@ public class Menu
 
     for (int i = 0; i < tmpValue.size(); i++){
       System.out.println( pizzaNr + " " + tmpValue.get(i));
-      //skal tælle pizzaer op til 14 og ikke mere
       pizzaNr++;
     }
       System.out.println();

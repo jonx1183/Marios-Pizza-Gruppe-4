@@ -18,6 +18,7 @@ public class StoreQueue implements IOrderQueue
   }
 
   public void DeleteOrder(Queue<IOrder> lst) {
+    //Måske skal den erstattes med remove?
     lst.poll();
   }
 

@@ -26,7 +26,7 @@ public class Controller {
             // adding order in queue
             //_management.AddOrderToQueue();
             _management.viewQueueList();
-            _userInterface.SelectNextClientOrder();
+           // _userInterface.SelectNextClientOrder();
 
         }
     }
