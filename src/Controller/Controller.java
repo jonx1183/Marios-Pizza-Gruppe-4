@@ -21,8 +21,10 @@ public class Controller {
         _userInterface.GetWelcomeMsg();
         _menu.PrintMenu();
 
-        while(gameOn == true){
+        while(gameOn == true){// switch case
             _management.viewOrder();
+            // adding order in queue
+            //_management.AddOrderToQueue();
             _management.viewQueueList();
             _userInterface.SelectNextClientOrder();
 

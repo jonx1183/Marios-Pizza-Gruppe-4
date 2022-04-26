@@ -20,4 +20,13 @@ public class StoreQueue implements IOrderQueue
   public void DeleteOrder(Queue<IOrder> lst) {
     lst.poll();
   }
+
+  /*
+  // Overriding toString() method of String class
+  @Override
+  public String toString() {
+    return
+  }
+
+   */
 }
